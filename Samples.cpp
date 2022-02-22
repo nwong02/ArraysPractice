@@ -26,7 +26,7 @@ int main(void)
 
 	/* Looping through arrays */
 	int arr[] = {3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 20, 22, 26, 28, 29};
-	int arr2[100];
+	int arr2[100] = { 0 };
 
 	for (int i = 0; i < 20; i++)
 	{
@@ -35,7 +35,7 @@ int main(void)
 
 	for (int i = 0; i < 100; i++)
 	{
-		arr2[i] = i + 4;
+		arr2[i] += 4;
 		printf("%d\n", i);
 	}
 
@@ -51,6 +51,14 @@ int main(void)
 	{
 		printf("%f\n", values[i]);
 	}
+
+
+	/* Element access in multidimensional arrays */
+	int matrix[][4] = { {14, 10, 6, 4}, {3, 7, 18, 11}, {13, 9, 5, 17}, {19, 12, 2, 1} };
+	int sum = 0;
+
+	int num = matrix[3][1];
+	printf("%d\n", num);
 
 	return 0;
 }
