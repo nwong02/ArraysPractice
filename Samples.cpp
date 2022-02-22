@@ -40,5 +40,17 @@ int main(void)
 	}
 
 
+	/* Length of array using sizeof() */
+	double values[] = { 1.0, 8, 2.27, 16.2, 2, 3.14, 12.6, 1.62, 9, 11 };
+	int len;
+
+	len = sizeof(values) / sizeof(double);
+	printf("%i\n", len);
+
+	for (int i = 0; i < len; i++)
+	{
+		printf("%f\n", values[i]);
+	}
+
 	return 0;
 }
